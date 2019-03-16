@@ -1,4 +1,5 @@
 {
-  "name": "explore_Travis",
-  "version": 2
+  "name": "proxy",
+  "version": 2,
+  "builds": [{ "src": "./server.js", "use": "@now/node-server" }]
 }

@@ -1,14 +1,14 @@
 {
-  "name": "explore_Travis",
+  "name": "proxy",
   "version": "1.0.0",
-  "description": "Trying to create a work env",
+  "description": "proxy with http and https sup",
   "scripts": {
-    "lint": "npx eslint date.js",
+    "lint": "npx eslint server.js",
     "test": "node test.js",
     "build": "echo 'building locally'",
     "now-build": "echo 'building on production' ",
-    "deploy": "now alias --token $TOKEN $(echo $(now deploy --token $TOKEN)) exploretravis-$BRANCH.now.sh && echo $BRANCH",
-    "start": "node date.js"
+    "deploy": "now alias --token $TOKEN $(echo $(now deploy --token $TOKEN)) michaelProxy.now.sh && echo $BRANCH",
+    "start": "node server.js"
   },
   "author": "Michael Markelov",
   "license": "ISC",

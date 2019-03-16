@@ -1,15 +1,17 @@
 language: node_js
 node_js:
-  - "node"
+- node
 before_script:
-  - npm i
-  - npm run lint
-  - npm run test
+- npm i
+- npm run lint
+- npm run test
 script:
-  - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
-  - echo "TRAVIS_BRANCH=$TRAVIS_BRANCH, PR=$PR, BRANCH =$BRANCH"
-  - npm run deploy
-  - npm start
+- export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH;
+  else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
+- echo "TRAVIS_BRANCH=$TRAVIS_BRANCH, PR=$PR, BRANCH =$BRANCH"
+- npm run deploy
+- npm start
 branches:
-  only:
-    master
+  only: master
+env:
+  secure: JkcaehThK4WKalJYMuNL8/5Wnh/7RNSggfG6Sp04LfJq3G3O4MUr8sU5IwkQd4WUlGAzSbINpiuF2B+rc/i6xQDpaOavgyU6PBwTF57mj2BxD6N9gZN7ZKbfkmeNCR+B55OhJn6r1BW+ORW8wJvTSJFaY9lgL08JEDlS05d6AK/fcKtrRyBtZ273nCQhqP0O1Gu/TO/swsHOIVFpLXcd3lkOUZ85GdW2r1Wf/bET8ZHSJOfcOLHzo4qaL4H5QbAJZaeXd9y3X1sZ80+Nd1i4CeEwc4CJ3bT/abKU+91NL81CrHXESoNxqnOg4o7PsjaFkFl4W/CTfAKDMNy4JCodTyG9FqL3R96xAVvX5cRzKX0r7q6XODJcs5ZqQYnXD1SPRrLGtz32E/c5yAhinPoo3D+cN74ca4sZD3TppM2c6TpQbIGGMDDv0t7pBiy9JCIv2MhdCKM/wjX0ygEN5q686MZIB3qu7NTU5W5nahkYzrQZvPElRPjcvYTgjR4jos/7Rdd80Uhwb62h01PBK3xJftoWYXkbvSzyj10J326CZ9C5Cs7UoOwMtgfQxk+duN38djngtS7PJhG9ND8ZdRIJmQfPhwu2zKYjD2Y+4DHCH7DIs0kIso9RCfFEuoGCKuUhgXVRoRxYcxpZIWAPWuuldAK5B7eyX3VYGpqxcY0IM0I=
