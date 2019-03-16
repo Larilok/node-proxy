@@ -10,7 +10,6 @@ script:
   else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
 - echo "TRAVIS_BRANCH=$TRAVIS_BRANCH, PR=$PR, BRANCH =$BRANCH"
 - npm run deploy
-- npm start
 branches:
   only: master
 env:
